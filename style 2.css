@@ -1,0 +1,285 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* lebih sharp dari png*/
+
+
+.content-wrapper {
+    flex: 1;
+}
+
+/* ===== NAVBAR ===== */
+
+
+
+
+/* ===== ABOUT US SECTION ===== */
+.about-section {
+    display: flex;
+    justify-content: center;
+    /* height: 80vh; */
+    /* boleh adjust height untuk view yang sesuai */
+    padding: 60px 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    gap: 50px;
+}
+
+/* Left Side - Image */
+.about-image-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Right Side - Content */
+.about-content {
+    flex: 1;
+}
+
+.about-content p {
+    font-family: 'Georgia';
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    border: 2px solid #333;
+    border-radius: 50px; /* Pill shape */
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 20px;
+        width: 95%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 60px !important;
+        text-align: center !important;
+        margin-top: 30px;
+    }
+
+    .about-content p {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .see-more-btn {
+        font-size: 15px;
+        padding: 8px 25px;
+    }
+
+    .staff-card {
+        width: 180px;
+    }
+
+    .image-container {
+        width: 160px;
+        height: 160px;
+    }
+
+    .staff-img {
+        width: 130px;
+        height: 130px;
+        margin: 15px auto;
+    }
+
+    .curved-text {
+        font-size: 10px;
+    }
+
+    .job-title {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 15px 0;
+        font-size: 16px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #b35c7d;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.
+
+active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+/* ===== TITLE ===== */
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 60px;
+    color: #7a2f47;
+    font-family: 'Love Script', cursive;
+    animation: titleFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes titleFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TEAM CONTAINER ===== */
+.team-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== STAFF ITEM ===== */
+.staff-card {
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 15px;
+}
+
+/* Arched Text SVG */
+.curved-text {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #b35c7d;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.staff-img {
+    width: 160px;
+    height: 160px;
+    background-color: #e2b7b7;
+    /* Placeholder color */
+    border-radius: 50%;
+    margin: 20px auto;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== TEXT STYLING ===== */
+.job-title {
+    font-family: 'Love Script', cursive;
+    font-size: 32px;
+    color: #b35c7d;
+    margin: 10px 0 5px 0;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    padding: 0 5px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #B05276;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}

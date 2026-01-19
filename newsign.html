@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signature Menu - Petite Pastry Cafe</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style 1.css">
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== SIGNATURE SECTION ===== */
+.signature-section {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 80px;
+}
+
+/* ===== MENU CARD ===== */
+.menu-card {
+  width: 360px;
+  text-align: center;
+}
+
+.menu-card h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  margin: 22px 0 12px;
+}
+
+.menu-card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Button */
+.menu-card a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 28px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu-card a:hover {
+  background: black;
+  color: white;
+}
+
+/* ===== IMAGE ===== */
+.image {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  width: 1px;
+  background: black;
+}
+
+/* ===== ANIMATIONS ===== */
+.drink {
+  animation: toggle 2s ease-in-out infinite;
+}
+
+@keyframes toggle {
+  0% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+  100% { transform: rotate(-4deg); }
+}
+
+.spin {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== MODAL (CSS ONLY) ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-box {
+  background: #fde8e8;
+  padding: 35px;
+  width: 380px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-box h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+        <div class="logo-container">
+            <div class="title-photo"><img src="logo.jpeg" class="title-photo" alt="Sarah's Photo"></div>
+            <div class="logo-text">Petite Pastry Cafe</div>
+        </div>
+    </header>
+	
+	 <!-- NAVBAR -->
+<div class="navbar">
+    <ul>
+                <li><a href="index.html">Home</a></li>
+        <li><a href="newsign.html"> Menu</a></li>
+        <li><a href="our.html">Our Team</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="get_in_touch.html">Contact Us</a></li>
+    </ul>
+</div>
+
+<!-- ===== SIGNATURE CONTENT ===== -->
+<section class="signature-section">
+
+  <!-- Drink -->
+  <div class="menu-card">
+    <div class="image drink">
+      <img src="SMLatte-no-bg-removebg.png">
+    </div>
+    <h2>Strawberry Frappe</h2>
+    <p>Fresh strawberries blended with creamy milk and crushed ice.</p>
+    <a href="drinkoo.html">SEE MORE DRINKS</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Dessert -->
+  <div class="menu-card">
+    <div class="image spin">
+      <img src="pistachiocake-no-bg-removebg.png">
+    </div>
+    <h2>Pistachio Cake</h2>
+    <p>Moist pistachio sponge layered with rich nutty cream.</p>
+    <a href="dessert.html">SEE MORE DESSERTS</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Savoury -->
+  <div class="menu-card">
+    <div class="image spin">
+      <img src="meatball-no-bg-removebg.png">
+    </div>
+    <h2>Spaghetti Con Polpette</h2>
+    <p>Classic spaghetti with tomato sauce and tender meatballs.</p>
+    <a href="savoury.html">SEE MORE FOOD</a>
+  </div>
+
+</section>
+
+<!-- ===== MODALS ===== -->
+<div id="drink" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close">✕</a>
+    <h3>Strawberry Frappe</h3>
+    <p>A refreshing blend of strawberries, milk, and ice, perfect for any season.</p>
+  </div>
+</div>
+
+<div id="dessert" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close">✕</a>
+    <h3>Pistachio Cake</h3>
+    <p>Soft layers infused with pistachio cream and delicate nutty aroma.</p>
+  </div>
+</div>
+
+<div id="savoury" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close">✕</a>
+    <h3>Spaghetti Con Polpette</h3>
+    <p>Italian-style spaghetti served with slow-cooked tomato sauce and meatballs.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 Petite Pastry Café. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

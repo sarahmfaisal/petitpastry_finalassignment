@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<title>Dessert - Petite Pastry Cafe</title>
+
+<style>
+
+
+
+/* ===== TITLE ===== */
+.title {
+    text-align: center;
+    font-size: 48px;
+    color: #7a2f47;
+    margin: 40px 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #7a2f47;
+}
+
+/* ===== SCROLL MENU ===== */
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.scroll-menu {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 70%;
+    scroll-behavior: smooth;
+}
+
+/* HIDE SCROLLBAR */
+.scroll-menu {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-menu::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== ITEM ===== */
+.item {
+    position: relative;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* ===== FOOD NAME BELOW IMAGE ===== */
+.item-name {
+    text-align: center;
+    margin-top: 8px;
+    font-family: 'Dancing Script', cursive;
+    color: #7a2f47;
+    font-size: 18px;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(179, 92, 125, 0.85);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    text-align: center;
+    padding: 10px;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+/* ===== ARROW ===== */
+.arrow {
+    background-color: #b35c7d;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* ===== BUTTON LINK ===== */
+.menu-btn{
+    background:#b05a7a;
+    color:white;
+    padding:15px 40px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:18px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.menu-btn:hover{
+    background:#7a3e56;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+    color: #333;
+    font-family: 'Dancing Script', cursive;
+}
+
+.title-animate {
+    animation: titleFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes titleFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale the entire item on hover */
+.item {
+    position: relative;
+    width: 180px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.item:hover {
+    transform: scale(1.1); /* zooms everything including overlay */
+}
+
+/* IMAGE */
+.item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* FOOD NAME BELOW IMAGE */
+.item-name {
+    text-align: center;
+    margin-top: 8px;
+    font-family: 'Dancing Script', cursive;
+    color: #7a2f47;
+    font-size: 18px;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(179, 92, 125, 0.85);
+    color:r: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.item:hover .overlay {
+    opacity: 1; /* only fade in overlay */
+}
+
+</style>
+
+<!-- ===== HEADER ===== -->
+<header>
+        <div class="logo-container">
+            <div class="title-photo"><img src="logo.jpeg" class="title-photo" alt="Sarah's Photo"></div>
+            <div class="logo-text">Petite Pastry Cafe</div>
+        </div>
+    </header>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <ul>
+                <li><a href="index.html">Home</a></li>
+        <li><a href="newsign.html"> Menu</a></li>
+        <li><a href="our.html">Our Team</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="get_in_touch.html">Contact Us</a></li>
+    </ul>
+</div>
+
+<!-- TITLE -->
+<h1 class="title-animate">Dessert</h1>
+<br>
+<br>
+
+<h2>Cakes</h2>
+
+<div class="scroll-wrapper">
+<button class="arrow" onclick="scrollCakes(-1)">&#10094;</button>
+
+<div class="scroll-menu" id="cakes">
+    <div class="item">
+        <img src="cake1.png">
+        <h3 class="item-name">Chocolate Cake</h3>
+        <div class="overlay">
+            <p>RM 19.90</p>
+            <p>Chocolate, flour, eggs, sugar, strawberry, butter</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="cake2.png">
+        <h3 class="item-name">Raspberry Pistachio Cheesecake</h3>
+        <div class="overlay">
+            <p>RM 18.90</p>
+            <p>Cream cheese, raspberries, sugar, eggs, pistachio, crust</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="cake3.png">
+        <h3 class="item-name">Classique Tiramisu</h3>
+        <div class="overlay">
+            <p>RM 29.60</p>
+            <p>Mascarpone, coffee, ladyfingers, cocoa, sugar</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="cake4.png">
+        <h3 class="item-name">Vanille Citron Delight</h3>
+        <div class="overlay">
+            <p>RM 16.90</p>
+            <p>Flour, eggs, sugar, butter, lemon</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="cake5.png">
+        <h3 class="item-name">Matcha Velours Cake</h3>
+        <div class="overlay">
+            <p>RM 16.90</p>
+            <p>Matcha, flour, eggs, sugar, butter</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="cake6.png">
+        <h3 class="item-name">Crème Pistache Royale</h3>
+        <div class="overlay">
+            <p>RM 18.90</p>
+            <p>Pistachios, flour, eggs, sugar, cream</p>
+        </div>
+    </div>
+</div>
+
+<button class="arrow" onclick="scrollCakes(1)">&#10095;</button>
+</div>
+
+<h2>Pastry</h2>
+
+<div class="scroll-wrapper">
+<button class="arrow" onclick="scrollPastry(-1)">&#10094;</button>
+
+<div class="scroll-menu" id="pastry">
+    <div class="item">
+        <img src="pastry1.png">
+        <h3 class="item-name">Roule Myrtille</h3>
+        <div class="overlay">
+            <p>RM 27.50</p>
+            <p>Blueberry, cinnamon, sugar, flour, butter</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="pastry2.png">
+        <h3 class="item-name">Croissant Choco</h3>
+        <div class="overlay">
+            <p>RM 14.90</p>
+            <p>Croissant, eggs, custard</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="pastry3.png">
+        <h3 class="item-name">Tarte Pomme</h3>
+        <div class="overlay">
+            <p>RM 12.90</p>
+            <p>Apple, cinnamon, sugar, pastry</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="pastry4.png">
+        <h3 class="item-name">Gaufre Choco</h3>
+        <div class="overlay">
+            <p>RM 16.90</p>
+            <p>Chocolate, flour, eggs, sugar, butter</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="pastry5.png">
+        <h3 class="item-name">Escargot Salé</h3>
+        <div class="overlay">
+            <p>RM 13.60</p>
+            <p>Mushroom, cream, cheese, pastry</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="pastry6.png">
+        <h3 class="item-name">Crème Berry</h3>
+        <div class="overlay">
+            <p>RM 13.60</p>
+            <p>Fruit filling</p>
+        </div>
+    </div>
+</div>
+
+<button class="arrow" onclick="scrollPastry(1)">&#10095;</button>
+</div>
+
+<!-- PAGE LINKS -->
+<div style="text-align:center; margin-top:50px;">
+    <a href="dessert.html" class="menu-btn">View Dessert</a>
+    <a href="savoury.html" class="menu-btn">View Food</a>
+    <a href="newsign.html" class="menu-btn">Back to Signature</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Petite Pastry Cafe
+</div>
+
+<script>
+function scrollCakes(direction) {
+    document.getElementById("cakes").scrollLeft += direction * 200;
+}
+
+function scrollPastry(direction) {
+    document.getElementById("pastry").scrollLeft += direction * 200;
+}
+</script>
+
+</body>
+</html>

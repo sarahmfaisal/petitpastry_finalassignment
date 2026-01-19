@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<title>Snacks Menu</title>
+
+<style>
+
+/* ===== BUTTON ===== */
+.menu-btn{
+  background:#b05a7a;
+  color:white;
+  padding:15px 40px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.menu-btn:hover{
+  background:#7a3e56;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:60px 10%;
+}
+
+.section h1{
+  text-align:center;
+  font-size:50px;
+  color:#3e3e3e;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom:40px;
+}
+
+.title-animate {
+    animation: titleFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes titleFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== GRID ===== */
+.menu-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:30px;
+}
+
+@media (min-width: 1500px) {
+    .menu-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ===== MENU ITEM + HOVER ===== */
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.menu-item:hover {
+    transform: scale(1.1); /* zoom everything */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* FOOD NAME BELOW IMAGE */
+.item-name {
+    text-align: center;
+    margin-top: 8px;
+    font-family: 'Dancing Script', cursive;
+    color: #7a2f47;
+    font-size: 18px;
+}
+
+/* OVERLAY POPUP */
+.menu-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(176,90,122,0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.menu-item:hover .menu-info {
+    opacity: 1; /* show overlay on hover */
+}
+
+</style>
+</head>
+<!-- ===== HEADER ===== -->
+<header>
+        <div class="logo-container">
+            <div class="title-photo"><img src="logo.jpeg" class="title-photo" alt="Sarah's Photo"></div>
+            <div class="logo-text">Petite Pastry Cafe</div>
+        </div>
+    </header>
+	
+	<body>
+	
+	 <!-- NAVBAR -->
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">Our History</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reserve.html">Reserved</a></li>
+        <li class="buy"><a href="buy.html">Buy Now</a></li>
+    </ul>
+</div>
+
+
+<!-- ===== SNACKS SECTION ===== -->
+<div class="section">
+  <h1 class="title-animate">Snacks</h1>
+  
+  <div class="menu-grid">
+    <div class="menu-item">
+      <img src="snack1.png" alt="Signature Cookies">
+      <h3 class="item-name">Signature Cookies</h3>
+      <div class="menu-info">
+        <p>RM 28.90</p>
+        <p>Flour, sugar, butter, eggs, chocolate</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="snack2.png" alt="Macaron Set">
+      <h3 class="item-name">Macaron Set</h3>
+      <div class="menu-info">
+        <p>RM 15.90</p>
+        <p>Almond, sugar, egg whites, fillings (vanilla / strawberry/ matcha)</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="snack3.png" alt="Mochi Bites">
+      <h3 class="item-name">Mochi Bites</h3>
+      <div class="menu-info">
+        <p>RM 15.90</p>
+        <p>Glutinous rice, sugar, filling (red bean / chocolate / matcha)</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="snack5.png" alt="Ice Cream Sandwich">
+      <h3 class="item-name">Ice Cream Sandwich</h3>
+      <div class="menu-info">
+        <p>RM 16.90</p>
+        <p>Cookies, ice cream</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE LINKS ===== -->
+<div style="text-align:center; margin-top:50px;">
+  <a href="dessert.html" class="menu-btn">View Desserts</a>
+  <a href="snacks.html" class="menu-btn">View Snacks</a>
+  <a href="menu.html" class="menu-btn">Back to Menu</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© 2026 Petite Pastry Café. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

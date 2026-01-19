@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Contact Us - Petite Pastry Cafe</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style 1.css">
+</head>
+<body>
+
+
+<header>
+        <div class="logo-container">
+            <div class="title-photo"><img src="logo.jpeg" class="title-photo" alt="Sarah's Photo"></div>
+            <div class="logo-text">Petite Pastry Cafe</div>
+        </div>
+    </header>
+
+   <!-- NAVBAR -->
+<div class="navbar">
+    <ul>
+                <li><a href="index.html">Home</a></li>
+        <li><a href="newsign.html"> Menu</a></li>
+        <li><a href="our.html">Our Team</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="get_in_touch.html">Contact Us</a></li>
+    </ul>
+</div>
+
+</header>
+
+<!-- ===== GET IN TOUCH SECTION ===== -->
+<section class="get-touch">
+  <div class="overlay"></div>
+
+  <div class="container">
+
+    <!-- LEFT CONTENT -->
+    <div class="left-content">
+      <h2>WE WILL CALL YOU BACK</h2>
+      <p>
+        Have a sweet question, feedback, or dessert request?  
+        Leave us a message and we’ll get back to you shortly💗
+      </p>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your e-mail" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Message" required></textarea>
+
+        <button type="submit">Send a message</button>
+      </form>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="right-image">
+      <img src="DRINK.jpg" alt="Cafe Dessert">
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== OUR LOCAL ===== -->
+<section class="our-local full-width">
+  <h2>Our Local</h2>
+  <div class="branches">
+    
+    <div class="branch-card">
+      <img src="map 1.png" alt="Cawangan 1" onclick="openImage(this)">
+      <h3>Cawangan 1</h3>
+      <p>Alamat:Jalan Galloway, Bukit Bintang, Kuala Lumpur</p>
+      <p>Telefon: 017-8139435</p>
+      <p>Waktu Operasi: 10am - 10pm</p>
+    </div>
+    
+    <div class="branch-card">
+      <img src="map 2.png" alt="Cawangan 2" onclick="openImage(this)">
+      <h3>Cawangan 2</h3>
+      <p>Alamat:Taman Paramount,Petaling Jaya, Selangor</p>
+      <p>Telefon: 019-4331027</p>
+      <p>Waktu Operasi: 10m - 10pm</p>
+    </div>
+   
+    <div class="branch-card">
+      <img src="map 3.png" alt="Cawangan 3" onclick="openImage(this)">
+      <h3>Cawangan 3</h3>
+      <p>Alamat: Tanah Rata, Cameron Highlands</p>
+      <p>Telefon: 012-3344556</p>
+      <p>Waktu Operasi: 10am - 10pm</p>
+    </div>
+   
+    <div class="branch-card">
+      <img src="map 5.png" alt="Cawangan 4" onclick="openImage(this)">
+      <h3>Cawangan 4</h3>
+      <p>Alamat: Taman Mount Austin, Johor Bahru</p>
+      <p>Telefon: 012-7788990</p>
+      <p>Waktu Operasi: 10am - 10pm</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMAGE MODAL ===== -->
+<div id="imageModal" class="image-modal">
+  <span class="close-btn" onclick="closeImage()">&times;</span>
+  <img id="modalImage">
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 Petite Pastry Café. All rights reserved.</p>
+</footer>
+
+<script>
+function openImage(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImage").src = img.src;
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
