@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+    <title>Home - Petite Pastry Cafe</title>
+	
+<link href=
+"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" 
+rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+
+</head>
+
+<header>
+        <div class="logo-container">
+            <div class="title-photo"><img src="logo.jpeg" class="title-photo" alt="Sarah's Photo"></div>
+            <div class="logo-text">Petite Pastry Cafe</div>
+        </div>
+    </header>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newsign.html"> Menu</a></li>
+        <li><a href="our.html">Our Team</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="get_in_touch.html">Contact Us</a></li>
+    </ul>
+</div>
+
+
+<!-- TITLE -->
+<h1 class="title-animate">Home</h1>
+<br>
+<br>
+
+   <div class="main-content">
+        <div class="left-section">
+            <div class="image-frame">
+                <img src="1.jpg" alt="Bakery Display" class="rotating-image active">
+                <img src="2.webp" alt="Fresh Pastries" class="rotating-image">
+                <img src="3.jpg" alt="Artisan Breads" class="rotating-image">
+            </div>
+        </div>
+		
+         <div class="right-section">
+            <div class="welcome-text">Welcome to Petite Pastry..</div>
+            <div class="encrypted-text">
+                Petite Pastry offers handcrafted pastries made with quality ingredients and passion. 
+				Paired with aromatic coffee, we create a warm space for you to relax and indulge.
+				</div>
+				
+        </div>
+		
+</div>
+
+<div class="video-section">
+    <h1 class="title-animate">Experience Our Craft</h1>
+    <div class="video-container">
+        <div class="video-column">
+            <video controls poster="poster.jpeg">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="video-caption">Watch how we create our artisan pastries with love and care</p>
+        </div>
+    </div>
+</div>
+
+	<!-- Testimonials -->
+    <div class="testimonial-section">
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Stumbled upon Petite Pastry and I’m so glad I did. The pastries are fresh, not too sweet, and absolutely satisfying. Great place to chill and enjoy good coffee."</p>
+                <p class="testimonial-author">- Sarah F.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Had a wonderful experience at Petite Pastry. The pastries are beautifully made, fresh, and full of flavour. The staff are friendly, and the café has a clean, comfortable ambience"</p>
+                <p class="testimonial-author">- Adam R.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Fresh bread every single day. You can taste the quality ingredients and the care they put into their baking."</p>
+                <p class="testimonial-author">- Michael S.</p>
+				 </div>
+            </div>
+        </div>
+	
+	<section style="background-color: white; padding: 40px 10px; text-align: center;">
+  <h2 style="font-family: 'Georgia', cursive; color: #a85080; margin-bottom: 15px;">
+    Share Your Experience
+  </h2>
+  <a href="get_in_touch.html" style="display: inline-block; background-color: #a85080; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px;">
+    Write to Us
+  </a>
+</section>
+
+	<footer class="site-footer">
+  <p>© 2026 Petite Pastry Café. All rights reserved.</p>
+</footer>
+
+      <script>
+        // Image rotation script
+        const images = document.querySelectorAll('.rotating-image');
+        let currentImageIndex = 0;
+
+        function rotateImages() {
+            // Remove active class from current image
+            images[currentImageIndex].classList.remove('active');
+            
+            // Move to next image
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            
+            // Add active class to next image
+            images[currentImageIndex].classList.add('active');
+        }
+
+        // Rotate images every 5 seconds (5000 milliseconds)
+        setInterval(rotateImages, 5000);
+    </script>
+  </div>
+  
+
+</body>
+</html>
